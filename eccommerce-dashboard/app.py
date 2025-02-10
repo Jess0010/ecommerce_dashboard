@@ -2,9 +2,10 @@ from flask import Flask, jsonify, render_template, Response
 import sqlite3
 import pathlib
 
+app = Flask(__name__)
+
 working_directory = pathlib.Path(__file__).parent.absolute()
 DATABASE = working_directory / "CCL_ecommerce.db"
-
 
 def query_db(query: str, args=()) -> list:
     with sqlite3.connect(DATABASE) as conn:
@@ -13,13 +14,18 @@ def query_db(query: str, args=()) -> list:
     return result
 
 
-app = Flask(__name__)
 
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
 
-@app.route("/")
-def index() -> str:
-    return render_template("dashboard.html")
+@app.route('/quicklinks')
+def quicklinks():
+    return render_template('quicklinks.html')
 
+@app.route('/softwaredevelopment')
+def softwaredevelopment():
+    return render_template('softwaredevelopment.html')
 
 @app.route("/api/orders_over_time")
 def orders_over_time() -> Response:
@@ -30,11 +36,9 @@ def orders_over_time() -> Response:
     ORDER BY order_date;
     """
     result = query_db(query)
-
     dates = [row[0] for row in result]
     counts = [row[1] for row in result]
     return jsonify({"dates": dates, "counts": counts})
-
 
 @app.route("/api/low_stock_levels")
 def low_stock_levels() -> Response:
@@ -45,11 +49,9 @@ def low_stock_levels() -> Response:
     ORDER BY s.quantity ASC;
     """
     result = query_db(query)
-
     products = [row[0] for row in result]
     quantities = [row[1] for row in result]
     return jsonify({"products": products, "quantities": quantities})
-
 
 @app.route("/api/most_popular_products")
 def most_popular_products_new() -> Response:
@@ -62,12 +64,12 @@ def most_popular_products_new() -> Response:
     LIMIT 10;
     """
     result = query_db(query)
-
     products = [
         {"product_id": row[0], "product_name": row[1], "total_quantity": row[2]}
         for row in result
     ]
     return jsonify(products)
+
 
 
 if __name__ == "__main__":

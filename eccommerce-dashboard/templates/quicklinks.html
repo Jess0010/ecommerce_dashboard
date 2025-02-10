@@ -4,13 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Dashboard</title>
+    <title>Quick Links</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
-    <link rel="stylesheet" href="../static/dashboard_stylesheet.css">
+    <link rel="stylesheet" href="../static/quicklinks_stylesheet.css">
     <style>
-       
         .navbar {
             background-color: yellow;
         }
@@ -21,12 +18,40 @@
         .navbar .nav-link:hover {
             color: rgb(255, 29, 29) !important;
         }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid yellow;
+            padding-bottom: 5px;
+        }
+        .quick-links {
+            list-style: none;
+            padding: 0;
+        }
+        .quick-links li {
+            margin: 10px 0;
+        }
+        .quick-links a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .quick-links a:hover {
+            text-decoration: underline;
+            color: #ff0000;
+        }
     </style>
 </head>
 
 <body>
 
-   
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">Shell IT</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -48,40 +73,14 @@
         </div>
     </nav>
 
-    <header>
-        <div class="dashboard-title">Shell IT Stock Overview</div>
-    </header>
-
-    <div class='container'>
-
-        <section>
-            <div class="chart-row">
-                <div class="chart-container full-width">
-                    <h2>Stock Order Trend over last 365 days</h2>
-                    <canvas id="ordersChart"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="chart-row">
-                <div class="chart-container half-width">
-                    <h2>Number of Requests Overtime</h2>
-                    <canvas id="stockChart"></canvas>
-                </div>
-                <div class="chart-container half-width">
-                    <h2>Most requested Item</h2>
-                    <canvas id="popularProductsChart"></canvas>
-                </div>
-            </div>
-        </section>
-
-    <footer>
-        <div class="footer"> 2025 Shell Information Technology Limited International</div>
-    </footer>
-
-
-    <script src="../static/dashboard_script.js"></script>
+    <div class="container">
+        <h2>Quick Helpful Links</h2>
+        <ul class="quick-links">
+            <li><a href="https://www.shell.com" target="_blank">Shell Website</a></li>
+            <li><a href="https://github.com/Jess0010/ecommerce_dashboard/tree/064544403b0987019dec8306d6f100351e3fae4c/eccommerce-dashboard" target="_blank"> My GitHub</a></li>
+            <li><a href="https://uk.linkedin.com/company/shell" target="_blank">Shell Linked In</a></li>
+        </ul>
+    </div>
 
 </body>
 

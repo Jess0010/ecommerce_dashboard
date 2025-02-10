@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development Techniques</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/softwaredevelopmentstylesheet.css">
+    <style>
+        .navbar {
+            background-color: yellow;
+        }
+
+        .navbar .nav-link {
+            color: black !important;
+            font-weight: bold;
+        }
+
+        .navbar .nav-link:hover {
+            color: rgb(255, 29, 29) !important;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section-title {
+            color: #ff1f1f;
+            margin-top: 20px;
+        }
+
+        .card {
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Shell IT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5000/dashboard">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5000/quicklinks">Quick Links</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5000/softwaredevelopment">Software Development Techniques</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container content">
+        <h1 class="text-center">Software Development Techniques</h1>
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="section-title">Waterfall Development Methodology</h2>
+                <p>The <strong>Waterfall model</strong> is a sequential approach where each phase must be completed before the next begins. It follows a linear process:</p>
+                <ul>
+                    <li><strong>Requirement Analysis:</strong> Gather and document all stakeholder requirements.</li>
+                    <li><strong>Design:</strong> Create a system architecture and design plan.</li>
+                    <li><strong>Implementation:</strong> Developers write code based on the design.</li>
+                    <li><strong>Testing:</strong> The system is tested for bugs and performance issues.</li>
+                    <li><strong>Deployment:</strong> The software is released to users.</li>
+                    <li><strong>Maintenance:</strong> Any issues found are resolved in updates.</li>
+                </ul>
+                <p><strong>Pros:</strong> Well-structured, clear deadlines, good for projects with stable requirements.</p>
+                <p><strong>Cons:</strong> Inflexible, difficult to accommodate changes, late testing phase.</p>
+                <p>Pressman & Maxim, 2020</p>
+            </div>
+        </div>
+
+    
+        <div class="card">
+            <div class="card-body">
+                <h2 class="section-title">Agile Development Methodology</h2>
+                <p>The <strong>Agile methodology</strong> is an iterative approach that emphasizes flexibility, collaboration, and customer feedback. It consists of:</p>
+                <ul>
+                    <li><strong>Scrum & Sprints:</strong> Work is divided into short cycles (sprints) to deliver small, incremental development.</li>
+                    <li><strong>Continuous Feedback:</strong> Stakeholders review progress frequently and provide feedback.</li>
+                    <li><strong>Cross-functional Teams:</strong> Developers, testers, and business analysts work together closely.</li>
+                </ul>
+                <p><strong>Pros:</strong> Adaptable to changes, faster delivery, continuous testing and feedback.</p>
+                <p><strong>Cons:</strong> Requires strong teamwork, less predictability in timeline and costs.</p>
+                <p>Cohn, 2004</p>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-body">
+                <h2 class="section-title">Secure Data Practices</h2>
+                <p>Ensuring data security is a critical part of modern software development. Some best practices include:</p>
+                <ul>
+                    <li><strong>Encryption:</strong> Encrypt sensitive data during storage and transit.</li>
+                    <li><strong>Access Control:</strong> Implement role-based access control (RBAC) to restrict sensitive data.</li>
+                    <li><strong>Regular Security Audits:</strong> Conduct vulnerability assessments and utilise penetration testing.</li>
+                    <li><strong>Data Masking:</strong> Protect user data by masking personally identifiable information (PII).</li>
+                    <li><strong>Use Secure Protocols:</strong> Enforce HTTPS and secure API authentication methods.</li>
+                </ul>
+                <p>Following these practices helps prevent data breaches and ensures compliance with regulations like the GDPR.</p>
+                <p> Cisa, 2024</p>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-body">
+                <h2 class="section-title">The Zen of Python</h2>
+                <p>The <strong>Zen of Python</strong> is a collection of guiding principles for writing clean, readable, and maintainable Python code. Some key principles include:</p>
+                <ul>
+                    <li><strong>Beautiful is better than ugly.</strong></li>
+                    <li><strong>Simple is better than complex.</strong></li>
+                    <li><strong>Readability counts.</strong></li>
+                    <li><strong>Errors should never pass silently.</strong></li>
+                    <li><strong>There should be one—and preferably only one—obvious way to do it.</strong></li>
+                    <li><strong>Now is better than never.</strong></li>
+                </ul>
+                <p>Peters,T. 2024</p>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>2025 Shell Information Technology Limited International</p>
+    </footer>
+
+</body>
+
+</html>
